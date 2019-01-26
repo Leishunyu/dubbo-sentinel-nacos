@@ -3,6 +3,7 @@
  */
 package com.huaifeng.dubbo.provider.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.huaifeng.dubbo.DemoService;
 
 /**
@@ -11,6 +12,7 @@ import com.huaifeng.dubbo.DemoService;
  * @author huaifeng
  * @since 2019-01-26
  */
+@Service
 public class DemoServiceImpl implements DemoService {
     @Override
     public void sayHello() {
