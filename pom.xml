@@ -7,13 +7,58 @@
     <version>1.0.0</version>
     <name>dubbo-sentinel-nacos</name>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <modules>
         <module>dubbo-interface</module>
         <module>dubbo-provider</module>
         <module>dubbo-consumer</module>
     </modules>
 
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.huaifeng.dubbo</groupId>
+            <artifactId>dubbo-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.1-SNAPSHOT</version>
+        </dependency>
 
+        <!-- Dubbo -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.5</version>
+        </dependency>
+        <!-- Spring Context Extras -->
+        <dependency>
+            <groupId>com.alibaba.spring</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>
     <build>
         <plugins>
             <plugin>
