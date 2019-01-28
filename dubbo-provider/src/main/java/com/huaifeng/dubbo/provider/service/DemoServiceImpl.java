@@ -3,6 +3,7 @@
  */
 package com.huaifeng.dubbo.provider.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.huaifeng.dubbo.DemoService;
 
@@ -15,6 +16,8 @@ import com.huaifeng.dubbo.DemoService;
 @Service
 public class DemoServiceImpl implements DemoService {
     @Override
+    @SentinelResource("test")
+
     public void sayHello() {
         System.out.println("!111");
     }

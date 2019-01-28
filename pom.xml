@@ -23,6 +23,32 @@
     <dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <dependency>
+        <groupId>com.alibaba.csp</groupId>
+        <artifactId>sentinel-transport-simple-http</artifactId>
+        <version>1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-dubbo-adapter</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-annotation-aspectj</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.huaifeng.dubbo</groupId>
             <artifactId>dubbo-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
