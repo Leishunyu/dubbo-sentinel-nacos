@@ -73,13 +73,17 @@ public abstract class NacosRuleRepository<T extends RuleEntity> implements RuleR
         }
         List<T> savedRules = new ArrayList<>(rules.size());
         for (T rule : rules) {
-            savedRules.add(save(rule));
+            try {
+                savedRules.add(save(rule));
+            } catch (NacosException e) {
+                e.printStackTrace();
+            }
         }
         return savedRules;
     }
 
     @Override
-    public T delete(Long aLong) {
+    public T delete(Long id) {
         return null;
     }
 

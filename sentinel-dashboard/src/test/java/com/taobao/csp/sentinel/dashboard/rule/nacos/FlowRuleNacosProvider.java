@@ -31,7 +31,7 @@ import org.springframework.stereotype.Component;
  * @author Eric Zhao
  * @since 1.4.0
  */
-@Component("flowRuleNacosProvider")
+@Component("flowRuleNacosProvider1")
 public class FlowRuleNacosProvider implements DynamicRuleProvider<List<FlowRuleEntity>> {
 
     @Autowired
