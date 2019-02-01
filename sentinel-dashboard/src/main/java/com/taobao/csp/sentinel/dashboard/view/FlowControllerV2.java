@@ -76,7 +76,6 @@ public class FlowControllerV2 {
                     }
                 }
             }
-            rules = repository.saveAll(rules);
             return Result.ofSuccess(rules);
         } catch (Throwable throwable) {
             logger.error("Error when querying flow rules", throwable);
