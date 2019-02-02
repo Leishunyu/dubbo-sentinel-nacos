@@ -20,12 +20,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
- * NacosRuleRepository
+ * NacosRuleRepositoryAdapter
  *
  * @author huaifeng
  * @since 2019-01-29
  */
-public abstract class NacosRuleRepository<T extends RuleEntity> implements RuleRepository<T, Long> {
+public abstract class NacosRuleRepositoryAdapter<T extends RuleEntity> implements RuleRepository<T, Long> {
     @Resource
     private ConfigService configService;
     @Autowired

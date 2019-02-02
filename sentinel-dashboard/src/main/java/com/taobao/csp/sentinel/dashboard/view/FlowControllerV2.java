@@ -21,8 +21,7 @@ import java.util.List;
 import com.alibaba.csp.sentinel.util.StringUtil;
 
 import com.taobao.csp.sentinel.dashboard.datasource.entity.rule.FlowRuleEntity;
-import com.taobao.csp.sentinel.dashboard.repository.nacos.NacosRuleRepository;
-import com.taobao.csp.sentinel.dashboard.repository.rule.InMemoryRuleRepositoryAdapter;
+import com.taobao.csp.sentinel.dashboard.repository.nacos.NacosRuleRepositoryAdapter;
 import com.taobao.csp.sentinel.dashboard.rule.DynamicRuleProvider;
 import com.taobao.csp.sentinel.dashboard.rule.DynamicRulePublisher;
 import org.slf4j.Logger;
@@ -52,7 +51,7 @@ public class FlowControllerV2 {
     private final Logger logger = LoggerFactory.getLogger(FlowControllerV2.class);
 
     @Autowired
-    private NacosRuleRepository<FlowRuleEntity> repository;
+    private NacosRuleRepositoryAdapter<FlowRuleEntity> repository;
 
     @Autowired
     @Qualifier("flowRuleNacosProvider")

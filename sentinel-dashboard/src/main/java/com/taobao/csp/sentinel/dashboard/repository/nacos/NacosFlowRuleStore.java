@@ -17,7 +17,6 @@ package com.taobao.csp.sentinel.dashboard.repository.nacos;
 
 import com.alibaba.csp.sentinel.slots.block.flow.ClusterFlowConfig;
 import com.taobao.csp.sentinel.dashboard.datasource.entity.rule.FlowRuleEntity;
-import com.taobao.csp.sentinel.dashboard.repository.rule.InMemoryRuleRepositoryAdapter;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -28,7 +27,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author leyou
  */
 @Component
-public class NacosFlowRuleStore extends NacosRuleRepository<FlowRuleEntity> {
+public class NacosFlowRuleStore extends NacosRuleRepositoryAdapter<FlowRuleEntity> {
 
     private static AtomicLong ids = new AtomicLong(0);
 
